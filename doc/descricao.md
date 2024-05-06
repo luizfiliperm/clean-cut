@@ -19,3 +19,8 @@
 | 6. Visualizar imagens de outros usuário |                                    |
 |      7. Substituir fundo da imagem      |                                    |
 |             8. Fazer Logout             |                                    |
+
+## Diagrama de Classes
+
+![diagrama de classes do projeto](https://github.com/luizfiliperm/clean-cut/blob/documentacao/doc/class-diagram.png)
+
