@@ -1,6 +1,6 @@
 # Clean-cut
 
-|       **Integrantes:**       |
+|       **Integrantes**       |
 |:----------------------------:|
 |       João Pedro Soares      |
 |       Luiz Filipe Matos      |
