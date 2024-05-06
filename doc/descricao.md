@@ -24,3 +24,14 @@
 
 ![diagrama de classes do projeto](https://github.com/luizfiliperm/clean-cut/blob/documentacao/doc/class-diagram.png)
 
+## Linguagens e Frameworks usados:
+
+1. HTML / CSS / JS - linguagens web / front end
+2. Bootstrap - framework de estilização
+3. Springboot - framework backend
+4. Thymeleaf - integração front end e back end
+5. MySQL - banco de dados
+
+## Ambiente de Deploy
+A ainda definir
+
