@@ -6,7 +6,7 @@
 }
 
 .header {
-    background-image: url(resources/statitc/image/wallpaper.jpg);
+    background-image: url(/src/main/resources/static/image/wallpaper.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -19,6 +19,7 @@
     flex-direction: column;
     align-items: center;
     color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 .titulo button{
@@ -26,6 +27,7 @@
     border-radius: 20px;
     color: gray;
     padding: 10px 30px;
+    margin-top: 30px;
 }
 
 .main{
@@ -65,7 +67,7 @@ section.ondas-box {
     height: 100px;
     position: absolute;
     bottom: 0;
-    background-image: url(resources/statitc/image/wave.png);
+    background-image: url(/src/main/resources/static/image/wave.png);
     background-size: 1000px 100px;
 
     animation: ondasAnimadas 5s ease-in-out infinite alternate;
