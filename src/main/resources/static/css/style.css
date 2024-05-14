@@ -49,6 +49,27 @@
     flex-direction: column;
 }
 
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: #fff;
+} /*Estilização do titulo dos cards*/
+
+.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin-top: 40px;
+    padding: 10px 55px;
+    border-radius: 40px;
+    font-size: 20px;
+    background-color: #d2d2d2;
+    box-shadow: #9f9f9f 4px 4px 10px;
+   
+}/*Estilização do botão dos cards*/
 
 
 /*Main ↑ */
