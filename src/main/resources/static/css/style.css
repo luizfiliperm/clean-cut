@@ -57,20 +57,40 @@
     background-color: #fff;
 } /*Estilização do titulo dos cards*/
 
+
+/*Edit*/
+
+.edit{
+    background-image: url(/src/main/resources/static/image/fundo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 50px;
+    width: 70%;
+    height: 70vh;
+    margin-top: 150px;
+    box-shadow: #9f9f9f 4px 4px 10px;
+}/* Area para remover o fundo*/
+
 .botao {
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
     margin-top: 40px;
+    margin-bottom: 80px;
     padding: 10px 55px;
     border-radius: 40px;
     font-size: 20px;
     background-color: #d2d2d2;
     box-shadow: #9f9f9f 4px 4px 10px;
    
-}/*Estilização do botão dos cards*/
-
+}/*Estilização do botão do edit*/
 
 /*Main ↑ */
 
