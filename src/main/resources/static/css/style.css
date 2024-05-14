@@ -13,6 +13,13 @@
     background-size: cover;
 }
 
+#logar {
+    background-color: gray;
+    border-radius: 10px;
+}
+
+/*Botao do menu ↑ */
+
 .titulo {
     padding-top: 150px;
     display: flex;
@@ -28,7 +35,10 @@
     color: gray;
     padding: 10px 30px;
     margin-top: 30px;
+    cursor: pointer;
 }
+
+/*Header  ↑ */
 
 .main{
     display: flex;
@@ -36,25 +46,12 @@
     justify-content: center;
     padding: 30px 30px;
     background-color: #fff;
-
     flex-direction: column;
 }
 
-.botao {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    margin-top: 40px;
-    padding: 10px 55px;
-    border-radius: 40px;
-    font-size: 20px;
-    background-color: #d2d2d2;
-    box-shadow: #9f9f9f 4px 4px 10px;
-   
-}
 
-/*Ondas*/
+
+/*Main ↑ */
 
 section.ondas-box {
     position: relative;
@@ -103,4 +100,4 @@ section.ondas-box {
     background-position-x: 100px;
 }
 
-/*Ondas*/
+/*Ondas ↑ */
