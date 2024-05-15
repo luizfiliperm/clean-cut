@@ -92,6 +92,29 @@
    
 }/*Estilização do botão do edit*/
 
+#texto {
+    margin: 5px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    margin-top: 4px;
+
+}/*Mini imagens*/
+
+.card {
+  aspect-ratio: 4/4;
+  width: 100%;
+  position: relative;
+  border-radius: 5px;
+
+} /*Mini imagens*/
+
 /*Main ↑ */
 
 section.ondas-box {
