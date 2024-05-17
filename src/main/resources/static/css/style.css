@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    border: 0;
     box-sizing: border-box;
 }
 
@@ -132,6 +133,8 @@
     border-radius: 5px;
 }
 
+/*Perguntas e repostas*/
+
 .perguntas {
     display: flex;
     flex-direction: column;
@@ -197,9 +200,9 @@ svg {
     }
 }
 
+/*Perguntas e repostas*/
+
 /*Main ↑ */
-
-
 
 
 
@@ -251,3 +254,46 @@ section.ondas-box {
 }
 
 /*Ondas ↑ */
+
+/*Footer*/
+
+.footer{
+    background-image: url(/src/main/resources/static/image/wallpaper.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    color: rgb(207, 207, 207);
+}
+
+.container h4 {
+    font-size: 1.5rem;
+}
+
+.feedback {
+  margin-left: 120px;
+  color: rgb(207, 207, 207);
+}
+
+.feedback textarea{
+    border-radius: 10px;
+
+}
+
+.feedback p {
+    color: #9f9f9f;
+}
+
+.enviar {
+    margin-left: 420px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #9f9f9f;
+    background-color: #5e5e5e;
+
+
+}
+
+
