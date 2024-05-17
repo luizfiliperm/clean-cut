@@ -12,3 +12,11 @@ window.addEventListener('scroll', function(){
     onda4.style.backgroundPositionX = 100 + rolagemPos * -2 + 'px';
     
 })
+
+const faqs = document.querySelectorAll('.faq');
+
+faqs.forEach(faq => {
+    faq.addEventListener('click', () => {
+        faq.classList.toggle('active');
+    })
+})
