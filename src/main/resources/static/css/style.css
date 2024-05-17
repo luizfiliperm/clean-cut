@@ -111,9 +111,15 @@
   aspect-ratio: 4/4;
   width: 100%;
   position: relative;
-  border-radius: 5px;
 
 } /*Mini imagens*/
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
 
 /*Main ↑ */
 
