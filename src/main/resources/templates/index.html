@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/src/main/resources/static/css/style.css">
+    <script defer src="/src/main/resources/static/script/script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Cut</title>
+</head>
+<body>
+
+ 
+
+    <header class="header">
+
+        <div class="menu">
+            <nav class="navbar navbar-dark navbar-expand-lg">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Clean Cut</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Galeria</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Descobrir</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Editar</a>
+                      </li>
+                      <li class="nav-item" id = "logar">
+                        <a class="nav-link active" href="#">Entrar</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </div><!--Menu-->
+
+        <div class="titulo">
+            <h1>Removedor de fundo</h1>
+    
+            <p>Apague fundos de imagens e substitua-os por fundos diferentes de sua escolha gratuitamente.</p>
+            <button><i class="fa-solid fa-plus"></i> Remover e postar</button>
+        </div> <!--div class titulo-->
+
+        <section class="ondas-box">
+            <div class="onda" id="onda1"></div>
+            <div class="onda" id="onda2"></div>
+            <div class="onda" id="onda3"></div>
+            <div class="onda" id="onda4"></div>
+        </section> <!--Section ondas-->
+    </header>
+
+    <main class="main">
+
+      <h1 class="info">Como remover um fundo em segundos?</h1>
+      <div class="row">
+        <div class="col ">
+          <div class="card h-100 text-bg-dark mb-3" style="max-width: 25rem;">
+            <div class="card-header">Passo 1</div>
+            <div class="card-body">
+              <h5 class="card-title">Selecionar uma 
+                imagem.</h5>
+              <p class="card-text"> Primeiro, escolha uma imagem que deseja remover o fundo clicando em “Remover e postar”.</p>
+              <p class="card-text">Seu formato pode ser em JPG ou PNG. Oferecemos suporte a todas dimensões de imagem.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-bg-dark mb-3" style="max-width: 25rem;">
+            <div class="card-header">Passo 2</div>
+            <div class="card-body">
+              <h5 class="card-title">Remova o fundo como um passe de mágica.</h5>
+              <p class="card-text">Nossa ferramenta remove automaticamente o fundo da sua imagem. A seguir, você pode escolher uma cor de fundo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-bg-dark mb-3" style="max-width: 25rem ;">
+            <div class="card-header">Passo 3</div>
+            <div class="card-body">
+              <h5 class="card-title">Faça download ou poste sua imagem.</h5>
+              <p class="card-text">Depois de selecionar uma nova cor de fundo, faça o download de sua foto e pronto!</p>
+              <p class="card-text">Ou postar em seu perfil criando uma conta no clean cut. Conseguindo acessar as imagens de outras pessoas</p>
+            </div>
+          </div>
+        </div>
+      </div> <!--Cards-->
+
+
+      <div class="edit">
+          <button >Remover fundo</button>
+      </div> <!--Area para remover o fundo-->
+
+      <p id="texto">Nao tem uma imagem? Teste com uma dessas:</p><!--Texto das mini imagens-->
+
+      
+      <div class="grid">
+
+        <div class="cards">
+          <img src="https://i.pinimg.com/564x/20/e0/fd/20e0fd7d19f497342c0801d389c41d44.jpg" alt="">
+        </div>
+        <div class="cards">
+          <img src="https://i.pinimg.com/564x/97/af/77/97af774d991d6851e0d6b98e810b93b7.jpg" alt="">
+        </div>
+        <div class="cards">
+          <img src="https://i.pinimg.com/564x/36/23/11/362311f4d489fdfdf84a45cb7540236b.jpg" alt="">
+        </div>
+        <div class="cards">
+          <img src="https://i.pinimg.com/736x/39/c8/d0/39c8d0801f1625f52f8c9e972743a660.jpg" alt="">
+        </div> <!--Mini imagens para usar de exemplo-->
+      </div>
+
+
+
+      <section class="perguntas">
+        <h2 class="title">Você perguntou, nós respondemos</h2>
+
+        <div class="faq">
+          <div class="question">
+            <h3>Como remover o fundo da imagem?</h3>
+
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="7px" viewBox="0 0 12 7" version="1.1">
+              <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+              <title>keyboard_arrow_down</title>
+              <desc>Created with Sketch.</desc>
+              <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="Rounded" transform="translate(-616.000000, -2467.000000)">
+                      <g id="Hardware" transform="translate(100.000000, 2404.000000)">
+                          <g id="-Round-/-Hardware-/-keyboard_arrow_down" transform="translate(510.000000, 54.000000)">
+                              <g>
+                                  <rect id="Rectangle-Copy-103" x="0" y="0" width="24" height="24"/>
+                                  <path d="M8.12,9.29 L12,13.17 L15.88,9.29 C16.27,8.9 16.9,8.9 17.29,9.29 C17.68,9.68 17.68,10.31 17.29,10.7 L12.7,15.29 C12.31,15.68 11.68,15.68 11.29,15.29 L6.7,10.7 C6.31,10.31 6.31,9.68 6.7,9.29 C7.09,8.91 7.73,8.9 8.12,9.29 Z" id="🔹-Icon-Color" fill="#1D1D1D"/>
+                              </g>
+                          </g>
+                      </g>
+                  </g>
+              </g>
+          </svg>
+
+          </div>
+          <div class="answer">
+            <p>Primeiro, escolha uma imagem que deseja remover o fundo clicando em “Remover e postar”. Seu formato pode ser em JPG ou PNG. Oferecemos suporte a todas dimensões de imagem.</p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <div class="question">
+            <h3>A remoção de fundo é gratuita?</h3>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="7px" viewBox="0 0 12 7" version="1.1">
+              <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+              <title>keyboard_arrow_down</title>
+              <desc>Created with Sketch.</desc>
+              <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="Rounded" transform="translate(-616.000000, -2467.000000)">
+                      <g id="Hardware" transform="translate(100.000000, 2404.000000)">
+                          <g id="-Round-/-Hardware-/-keyboard_arrow_down" transform="translate(510.000000, 54.000000)">
+                              <g>
+                                  <rect id="Rectangle-Copy-103" x="0" y="0" width="24" height="24"/>
+                                  <path d="M8.12,9.29 L12,13.17 L15.88,9.29 C16.27,8.9 16.9,8.9 17.29,9.29 C17.68,9.68 17.68,10.31 17.29,10.7 L12.7,15.29 C12.31,15.68 11.68,15.68 11.29,15.29 L6.7,10.7 C6.31,10.31 6.31,9.68 6.7,9.29 C7.09,8.91 7.73,8.9 8.12,9.29 Z" id="🔹-Icon-Color" fill="#1D1D1D"/>
+                              </g>
+                          </g>
+                      </g>
+                  </g>
+              </g>
+          </svg>
+          
+          </div>
+          <div class="answer">
+            <p>Primeiro, escolha uma imagem que deseja remover o fundo clicando em “Remover e postar”. Seu formato pode ser em JPG ou PNG. Oferecemos suporte a todas dimensões de imagem.</p>
+          </div>
+        </div>
+        
+
+        <div class="faq">
+          <div class="question">
+            <h3>Como faço para mudar a cor do fundo?</h3>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="7px" viewBox="0 0 12 7" version="1.1">
+              <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+              <title>keyboard_arrow_down</title>
+              <desc>Created with Sketch.</desc>
+              <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="Rounded" transform="translate(-616.000000, -2467.000000)">
+                      <g id="Hardware" transform="translate(100.000000, 2404.000000)">
+                          <g id="-Round-/-Hardware-/-keyboard_arrow_down" transform="translate(510.000000, 54.000000)">
+                              <g>
+                                  <rect id="Rectangle-Copy-103" x="0" y="0" width="24" height="24"/>
+                                  <path d="M8.12,9.29 L12,13.17 L15.88,9.29 C16.27,8.9 16.9,8.9 17.29,9.29 C17.68,9.68 17.68,10.31 17.29,10.7 L12.7,15.29 C12.31,15.68 11.68,15.68 11.29,15.29 L6.7,10.7 C6.31,10.31 6.31,9.68 6.7,9.29 C7.09,8.91 7.73,8.9 8.12,9.29 Z" id="🔹-Icon-Color" fill="#1D1D1D"/>
+                              </g>
+                          </g>
+                      </g>
+                  </g>
+              </g>
+          </svg>
+          
+          </div>
+          <div class="answer">
+            <p>Primeiro, escolha uma imagem que deseja remover o fundo clicando em “Remover e postar”. Seu formato pode ser em JPG ou PNG. Oferecemos suporte a todas dimensões de imagem.</p>
+          </div>
+        </div>
+        
+
+        
+      </section><!--Faq-->
+
+    </main>
+
+    
+
+    <footer class="footer">
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,128L48,144C96,160,192,192,288,181.3C384,171,480,117,576,101.3C672,85,768,107,864,144C960,181,1056,235,1152,224C1248,213,1344,139,1392,101.3L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <h4>Contato</h4>
+            <p><i class="fa-solid fa-phone"></i> (11) 99999-9999</p>
+            <p><i class="fa-solid fa-envelope"></i> 0KQpV@example.com</p>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <h4>Redes Sociais</h4>
+            <p><i class="fa-brands fa-facebook"></i> /clean-cut</p>
+            <p><i class="fa-brands fa-instagram"></i> @clean-cut</p>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <h4>Links</h4>
+            <p><i class="fa-solid fa-house"></i> Home</p>
+            <p><i class="fa-solid fa-file"></i> Sobre</p>
+            <p><i class="fa-solid fa-file"></i> FAQ</p>
+          </div> 
+        </div>
+       </div> 
+
+          <div class="copyright">
+            <p>© 2023 Clean Cut. Todos os direitos reservados.</p>
+          </div>
+          
+    </footer>
+
+    <script src="https://kit.fontawesome.com/de140a3406.js" crossorigin="anonymous"></script> <!--Icons-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> <!--Bootstrap-->
+    
+</body>
+</html>
