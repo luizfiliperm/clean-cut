@@ -65,13 +65,13 @@ A ainda definir
 3. A conta a ser acessada deve ser uma conta já existente.
 
 ### Cenários de Execução
-- Dado que estou na página de login,
-- Quando eu insiro meu email e senha incorretos e clico no botão "Login",
+- Dado que estou na página de login
+- Quando eu insiro meu email e senha incorretos e clico no botão "Login"
 - Então eu recebo uma mensagem de erro informando que as credenciais estão incorretas.
 <br>
 
-- Dado que estou na página de login,
-- Quando eu insiro meu email e senha corretamente e clico no botão "Login",
+- Dado que estou na página de login
+- Quando eu insiro meu email e senha corretamente e clico no botão "Login"
 - Então eu posso acessar o site livremente.
 
 ## 3 - Remover fundo da imagem
@@ -80,17 +80,36 @@ A ainda definir
 - Quero remover o fundo de uma imagem
 - Para usar a imagem sem o fundo original.
 
-### Critérios de Aceite:
+### Critérios de Aceite
 1. O sistema deve permitir ao usuário fazer upload de uma imagem.
 2. O sistema deve remover o fundo da imagem.
 
 ### Cenários de Execução
-
-- Dado que estou na página de edição de imagens,
-- Quando eu faço upload de uma imagem e clico no botão "Remover Fundo",
+- Dado que estou na página de edição de imagens
+- Quando eu faço upload de uma imagem e clico no botão "Remover Fundo"
 - Então vejo a imagem com o fundo removido.
 <br>
 
-- Dado que estou na página de edição de imagens,
-- Quando eu faço upload de uma imagem em um formato não suportado e clico no botão "Remover Fundo",
+- Dado que estou na página de edição de imagens
+- Quando eu faço upload de uma imagem em um formato não suportado e clico no botão "Remover Fundo"
 - Então eu recebo uma mensagem de erro informando que o formato da imagem não é suportado.
+
+## 4 - Definir Privacidade da Imagem
+### História de Usuário
+- Como um usuário
+- Quero definir a privacidade da minha imagem
+- Para controlar quem pode ver minhas imagens.
+
+### Critérios de Aceite
+1. O sistema deve permitir ao usuário escolher entre as opções de privacidade (privado, público).
+2. A opção deve ser aplicável para todas as imagens individualmente.
+
+### Cenários de Execução
+- Dado que estou na página de visualização das minhas imagens
+- Quando eu seleciono uma imagem e escolho a opção "Privada"
+- Então a imagem é marcada como privada e só eu posso vê-la.
+<br>
+
+- Dado que estou na página de visualização das minhas imagens
+- Quando eu seleciono uma imagem e escolho a opção "Pública"
+- Então a imagem é marcada como pública e todos na plataforma podem vê-la.
