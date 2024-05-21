@@ -6,7 +6,7 @@
 }
 
 .header {
-    background-image: url(/src/main/resources/static/image/wallpaper.jpg);
+    background-image: url ('@{/image/wallpaper.jpg}');
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -61,7 +61,7 @@
 /*Edit*/
 
 .edit{
-    background-image: url(/src/main/resources/static/image/fundo.jpg);
+    background-image: url('../image/backgroundTransparent.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -217,7 +217,7 @@ section.ondas-box {
     height: 100px;
     position: absolute;
     bottom: 0;
-    background-image: url(/src/main/resources/static/image/wave.png);
+    background-image: url('../image/wave.png');
     background-size: 1000px 100px;
 
     animation: ondasAnimadas 5s ease-in-out infinite alternate;
@@ -258,7 +258,7 @@ section.ondas-box {
 /*Footer*/
 
 .footer{
-    background-image: url(/src/main/resources/static/image/wallpaper.jpg);
+    background-image: url('../image/wallpaper.jpg');
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
