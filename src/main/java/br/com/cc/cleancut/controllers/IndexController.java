@@ -10,6 +10,7 @@ public class IndexController {
     @GetMapping("/")
     public ModelAndView index() {
         ModelAndView mv = new ModelAndView("index");
+        mv.addObject("isIndex", true);
 
         return mv;
     }
