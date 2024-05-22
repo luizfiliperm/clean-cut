@@ -1,6 +1,6 @@
 package br.com.cc.cleancut.model;
-
 import jakarta.persistence.*;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,5 +25,8 @@ public class Image {
 
     @OneToMany
     private List<Image> images;
+
+    @OneToMany(mappedBy = "image")
+    private List<Like> likes;
 
 }

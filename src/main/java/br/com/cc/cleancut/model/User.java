@@ -1,5 +1,6 @@
 package br.com.cc.cleancut.model;
 import jakarta.persistence.*;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,5 +23,8 @@ public class User {
 
     @OneToMany(mappedBy = "user")
     private List<Download> downloads;
+    
+    @OneToMany(mappedBy = "user")
+    private List<Like> likes;
 
 }
