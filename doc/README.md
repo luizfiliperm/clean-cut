@@ -113,3 +113,60 @@ A ainda definir
 - Dado que estou na página de visualização das minhas imagens
 - Quando eu seleciono uma imagem e escolho a opção "Pública"
 - Então a imagem é marcada como pública e todos na plataforma podem vê-la.
+
+## 5 - Visualizar inhas Imagens
+### História de Usuário
+- Como um usuário
+- Quero visualizar minhas imagens
+- Para gerenciar e editar as imagens que carreguei.
+
+### Critérios de Aceite
+1. O sistema deve listar todas as imagens carregadas pelo usuário.
+2. O usuário deve poder ver detalhes e opções de edição para cada imagem.
+
+### Cenários de Execução
+- Dado que estou na página principal da minha conta
+- Quando eu navego para a secão "Minhas Imagens"
+- Então eu vejo uma lista de todas as minhas imagens carregadas.
+<br>
+
+- Dado que estou na seção "Minhas Imagens"
+- Quando eu clico em uma imagem
+- Então vejo detalhes de edição para essa imagem.
+
+## 6 - Vizualizar Imagens de Outros Usuários
+### História de Usuário
+- Como um usuário
+- Quero visualizar imagens de outros usuários
+- Para descobrir novas imagens.
+
+### Critérios de Aceite
+1. O sistema deve permitir ao usuário navegar por imagens públicas de outros usuários.
+2. O usuário deve poder ver detalhes das imagens compartilhadas publicamente.
+
+### Cenários de Execução
+- Dado que estou na página principal da minha conta
+- Quando eu navego para a secão "Descobrir"
+- Então eu vejo uma galeria de imagens públicas de outros usuários.
+
+## 7 - Substituir Fundo da Imagem
+### História de Usuário
+- Como usuário
+- Quero substituir o fundo de uma imagem minha
+- Para criar novas versões das minhas imagens com fundos diferentes.
+
+### Critérios de Aceite
+1. O sistema deve permitir ao usuário carregar uma nova imagem de fundo.
+2. O sistema deve aplicar o novo fundo à imagem original.
+
+### Cenários de Execução
+- Dado que estou na página de edição de imagens
+- Quando eu faço upload de uma nova imagem de fundo e clico no botão "Substituir Fundo"
+- Então vejo a imagem original com o novo fundo aplicado.
+<br>
+
+- Dado que estou na página de edição de imagens
+- Quando eu faço upload de uma nova imagem de fundo em um formato não suportado e clico no botão "Substituir Fundo"
+- Então vejo uma mensagem de erro informando que o formato da imagem não é suportado.
+
+## 
