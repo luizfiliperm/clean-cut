@@ -114,7 +114,7 @@ A ainda definir
 - Quando eu seleciono uma imagem e escolho a opção "Pública"
 - Então a imagem é marcada como pública e todos na plataforma podem vê-la.
 
-## 5 - Visualizar inhas Imagens
+## 5 - Visualizar Minhas Imagens
 ### História de Usuário
 - Como um usuário
 - Quero visualizar minhas imagens
@@ -169,4 +169,4 @@ A ainda definir
 - Quando eu faço upload de uma nova imagem de fundo em um formato não suportado e clico no botão "Substituir Fundo"
 - Então vejo uma mensagem de erro informando que o formato da imagem não é suportado.
 
-## 
+## 8
