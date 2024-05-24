@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{css/loginStyle.css}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-form" id="loginForm">
+            <h1>Sing in</h1>
+
+            <div class="social-icons">
+                <a href="" class="icon"><i class="fa-brands fa-google"></i></a>
+                <a href="" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                <a href="" class="icon"><i class="fa-brands fa-github"></i></a>
+                <a href="" class="icon"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+
+            <div class="form-message-container">
+                <span>Ou use seu email e senha.</span>
+            </div>
+
+            <form>
+                <input class="areaInput" type="email" placeholder="Email">
+                <input class="areaInput" type="password" placeholder="Password">
+                <button class="botaoLogin"><a href="/index.html" class="btnLogin">Sing in</a></button>
+            </form>
+
+            <p>
+                Não tem uma conta? <a href="#" id="showSignup">Sing up</a>
+            </p>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
