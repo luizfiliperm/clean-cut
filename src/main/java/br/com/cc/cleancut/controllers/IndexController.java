@@ -17,9 +17,10 @@ public class IndexController {
         return mv;
     }
 
-    @GetMapping("/")
+    @GetMapping("/login")
     public ModelAndView login() {
-        ModelAndView mv = new ModelAndView("login");
+        ModelAndView mv = new ModelAndView("pages/login");
+         
         return mv;
     }
     
