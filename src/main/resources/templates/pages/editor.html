@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head th:replace="~{base :: head('Editor de fotos')}"></head>
+<body>
+
+
+    <header th:replace="~{base :: header('15')}"></header>
+
+
+    <div class="container-remover-fundo">
+
+        <h1 class="titulo-remover-fundo">
+        Edite sua foto
+        </h1>
+
+        <div class="remover-fundo"> 
+            <img src="../image/backgroundTransparent.jpg" alt="">
+            
+            <div class="botao-remover">
+                <button>Adicionar imagem</button>
+                <button>Remover fundo</button>
+                <button>postar</button>
+                <button>donwload</button>
+            </div>
+        </div>
+
+       
+    </div>
+
+
+    <footer th:replace ="~{base :: footer}"></footer>
+
+    
+    <script src="https://kit.fontawesome.com/de140a3406.js" crossorigin="anonymous"></script> <!--Icons-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> <!--Bootstrap-->
+    
+</body>
+</html>
