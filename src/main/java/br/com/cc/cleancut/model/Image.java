@@ -1,11 +1,11 @@
 package br.com.cc.cleancut.model;
-
-import java.util.List;
-
 import jakarta.persistence.*;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -23,8 +23,10 @@ public class Image {
 
     private Boolean isPrivate;
 
+    @OneToMany
+    private List<Image> images;
+
     @OneToMany(mappedBy = "image")
     private List<Like> likes;
-    
 
 }
