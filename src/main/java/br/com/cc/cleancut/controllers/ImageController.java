@@ -34,8 +34,8 @@ public class ImageController {
         return mv;
     }
 
-    @PostMapping("/upload")
-    public ModelAndView handleImageUpload(@RequestParam("imageFile") MultipartFile file,
+    @PostMapping("/remove-background")
+    public ModelAndView removeBackground(@RequestParam("imageFile") MultipartFile file,
                                    @RequestParam("isPrivate") String isPrivateStr,
                                    RedirectAttributes redirectAttributes) {
         Boolean isPrivate = Boolean.parseBoolean(isPrivateStr);
