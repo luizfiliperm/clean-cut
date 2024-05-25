@@ -9,9 +9,11 @@ import br.com.cc.cleancut.repositories.UserRepository;
 public class UserService {
 
     UserRepository userRepository;
+    PasswordService passwordService;
 
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository, PasswordService passwordService) {
         this.userRepository = userRepository;
+        this.passwordService = passwordService;
     }
 
     public User save(User user) {
@@ -20,6 +22,7 @@ public class UserService {
             throw new RuntimeException("User already exists");
         }
 
+        user.setPassword(passwordService.encrypt(user.getPassword()));
         return userRepository.save(user);
     }
 
