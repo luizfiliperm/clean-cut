@@ -281,3 +281,43 @@ section.ondas-box {
 
 /* Area de estilização da tela de editor de fotos*/
 
+.container-remover-fundo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.container-remover-fundo h1 {
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
+.remover-fundo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.remover-fundo img {
+    margin: 10px 20px;
+     
+    border-radius: 20px;
+}
+
+.botao-remover{
+    margin: 10px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.botao-remover button {
+    margin-top: 10px;
+    padding: 10px 30px;
+    background-color: #6958a7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
