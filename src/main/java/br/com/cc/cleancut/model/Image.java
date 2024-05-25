@@ -29,4 +29,7 @@ public class Image {
     @OneToMany(mappedBy = "image")
     private List<Like> likes;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 }

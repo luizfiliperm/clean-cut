@@ -27,4 +27,7 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<Like> likes;
 
+    @OneToMany(mappedBy = "user")
+    private List<Image> images;
+
 }
