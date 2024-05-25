@@ -18,10 +18,29 @@
             
             <div class="botao-remover">
                 
-                <form type="file" class="form-edit-imagens"><p>Adicionar imagem</p></form>
-                <form type="file" class="form-edit-imagens"><p>Remover fundo</p></form>
-                <form type="file" class="form-edit-imagens"><p>Postar</p></form>
-                <form type="file" class="form-edit-imagens"><p>Donwload</p></form>
+                <form class="form-enviar-imagem">
+                    <input type="file" name="imageFile" id="inputImage" required>
+
+                    
+                    <div class="select-container-privado">
+                        <input type="radio" id="private" name="isPrivate" value="true">
+                        <label for="private">Tornar foto privada</label>
+                    </div>
+
+                    <div class="select-container-publico">
+                        <input type="radio" id="public" name="isPrivate" value="false">
+                        <label for="public">Tornar foto pública</label>
+                    </div>
+
+                    <button type="submit" class="btn-enviar"> Remover o fundo</button>
+
+                    <button class="btn-enviar">Download</button>
+
+                </form>
+
+                
+                
+
             </div>
         </div>
 

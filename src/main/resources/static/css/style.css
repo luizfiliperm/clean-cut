@@ -312,7 +312,14 @@ section.ondas-box {
     flex-direction: column;
 }
 
-.botao-remover .form-edit-imagens  {
+.botao-remover .form-enviar-imagem {
+    display: flex;
+    flex-direction: column ;
+   
+}
+
+.botao-remover .form-enviar-imagem .btn-enviar {
+
     margin-top: 10px;
     padding: 10px 30px;
     background-color: #6958a7;
@@ -322,10 +329,16 @@ section.ondas-box {
     border-radius: 20px;
 }
 
-.botao-remover .form-edit-imagens p {
-
-    text-align: center;
-    background-color: #6958a7;
-    margin-bottom: 0;
+.select-container-publico {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px 10px;
 }
 
+.select-container-privado {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px 10px;
+}
