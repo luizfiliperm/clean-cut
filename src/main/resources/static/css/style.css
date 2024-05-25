@@ -8,7 +8,7 @@
 .header {
     background:  linear-gradient(
         rgba(46, 5, 75, 0.5),rgba(40, 6, 65, 0.5)
-      ),url(/assets/wallpaperLogin.jpg);
+      ),url("../image/wallpaper.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -261,7 +261,7 @@ section.ondas-box {
 .footer{
     background:  linear-gradient(
         rgba(46, 5, 75, 0.5),rgba(40, 6, 65, 0.5)
-      ),url(/assets/wallpaperLogin.jpg);
+      ),url("../image/wallpaper.jpg");
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -351,7 +351,7 @@ section.ondas-box {
 .container-imagens-usuario {
     background-image: linear-gradient(
         rgba(46, 5, 75, 0.5),rgba(40, 6, 65, 0.5)
-      ),url(/assets/wallpaper.jpg);
+      ),url("../image/wallpaper.jpg");
     margin: 20px 50px;
     border-radius: 20px;
 }
