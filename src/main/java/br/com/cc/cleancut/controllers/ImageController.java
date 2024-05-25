@@ -61,7 +61,7 @@ public class ImageController {
         return mv;
     }
 
-    @GetMapping("/image/{id}")
+    @GetMapping("/images/{id}")
     public ResponseEntity<byte[]> getImage(@PathVariable Long id){
         Image image = imageService.getImageById(id);
 
