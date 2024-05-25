@@ -23,8 +23,8 @@ public class Image {
 
     private Boolean isPrivate;
 
-    @OneToMany
-    private List<Image> images;
+    @OneToMany(mappedBy = "image")
+    private List<Download> downloads;
 
     @OneToMany(mappedBy = "image")
     private List<Like> likes;
