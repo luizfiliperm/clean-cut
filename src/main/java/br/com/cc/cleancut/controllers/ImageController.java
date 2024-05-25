@@ -50,7 +50,7 @@ public class ImageController {
             image.setIsPrivate(isPrivate);
 
             imageService.saveImage(image);
-            imageUrl = "/image/" + image.getId();
+            imageUrl = "/images/" + image.getId();
 
         } catch (IOException e) {
             e.printStackTrace();

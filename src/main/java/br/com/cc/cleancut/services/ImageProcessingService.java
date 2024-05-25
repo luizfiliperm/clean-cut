@@ -22,7 +22,7 @@ public class ImageProcessingService {
     public Image removeBackground(Image image){
         Mat src = byteToMat(image.getData());
 
-        Mat finalImage = removeBackground2(src);
+        Mat finalImage = removeBackground(src);
 
         image.setData(matToByte(finalImage));
         return image;
@@ -65,69 +65,6 @@ public class ImageProcessingService {
 
         Mat finalImage = new Mat();
         Core.add(backgroundBGR, foregroundImage, finalImage);
-
-        return finalImage;
-    }
-
-    public Mat removeBackground1(Mat myImage) {
-        // Suavize a imagem para reduzir o ruído
-        Imgproc.GaussianBlur(myImage, myImage, new Size(5, 5), 0);
-
-        // Crie uma escala de cinza de um único canal para thresholding
-        Mat myImageGrey = new Mat();
-        Imgproc.cvtColor(myImage, myImageGrey, Imgproc.COLOR_BGR2GRAY);
-
-        // Realize o thresholding de Otsu e extraia o plano de fundo
-        // Usamos o Threshold Binário, pois queremos criar um fundo totalmente branco
-        Mat background = new Mat();
-        Imgproc.threshold(myImageGrey, background, 0, 255, Imgproc.THRESH_BINARY + Imgproc.THRESH_OTSU);
-
-        // Converta preto e branco de volta para 3 canais de escala de cinza
-        Mat backgroundBGR = new Mat();
-        Imgproc.cvtColor(background, backgroundBGR, Imgproc.COLOR_GRAY2BGR);
-
-        // Realize o thresholding de Otsu e extraia o primeiro plano
-        // Usamos TOZERO_INV, pois queremos manter alguns detalhes do primeiro plano
-        Mat foreground = new Mat();
-        Imgproc.threshold(myImageGrey, foreground, 0, 255, Imgproc.THRESH_TOZERO_INV + Imgproc.THRESH_OTSU);
-
-        // Atualize o primeiro plano com bitwise_and para extrair o primeiro plano real
-        Core.bitwise_and(myImage, myImage, foreground);
-
-        // Combine o plano de fundo e o primeiro plano para obter a imagem final
-        Mat finalImage = new Mat();
-        Core.add(backgroundBGR, foreground, finalImage);
-
-
-        return finalImage;
-    }
-
-    public Mat removeBackground2(Mat myImage) {
-        // Suavize a imagem para reduzir o ruído
-        Imgproc.GaussianBlur(myImage, myImage, new Size(5, 5), 0);
-
-        // Converta para escala de cinza
-        Mat myImageGrey = new Mat();
-        Imgproc.cvtColor(myImage, myImageGrey, Imgproc.COLOR_BGR2GRAY);
-
-        // Aplique o threshold adaptativo para extrair o plano de fundo
-        Mat background = new Mat();
-        Imgproc.adaptiveThreshold(myImageGrey, background, 255, Imgproc.ADAPTIVE_THRESH_MEAN_C, Imgproc.THRESH_BINARY_INV, 11, 2);
-
-        // Converta preto e branco de volta para 3 canais de escala de cinza
-        Mat backgroundBGR = new Mat();
-        Imgproc.cvtColor(background, backgroundBGR, Imgproc.COLOR_GRAY2BGR);
-
-        // Extraia o primeiro plano
-        Mat foreground = new Mat();
-        Core.bitwise_not(background, foreground); // Inverta o plano de fundo para obter o primeiro plano
-
-        // Atualize o primeiro plano com bitwise_and para extrair o primeiro plano real
-        Core.bitwise_and(myImage, myImage, foreground);
-
-        // Combine o plano de fundo e o primeiro plano para obter a imagem final
-        Mat finalImage = new Mat();
-        Core.add(backgroundBGR, foreground, finalImage);
 
         return finalImage;
     }
