@@ -312,7 +312,7 @@ section.ondas-box {
     flex-direction: column;
 }
 
-.botao-remover button {
+.botao-remover .form-edit-imagens  {
     margin-top: 10px;
     padding: 10px 30px;
     background-color: #6958a7;
@@ -321,3 +321,11 @@ section.ondas-box {
     cursor: pointer;
     border-radius: 20px;
 }
+
+.botao-remover .form-edit-imagens p {
+
+    text-align: center;
+    background-color: #6958a7;
+    margin-bottom: 0;
+}
+
