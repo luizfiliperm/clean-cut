@@ -23,5 +23,12 @@ public class IndexController {
         return mv;
     }
 
+    @GetMapping("/explore")
+    public ModelAndView explore() {
+        ModelAndView mv = new ModelAndView("pages/explore");
+       
+
+        return mv;
+    }
 
 } 
