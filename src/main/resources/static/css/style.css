@@ -6,7 +6,9 @@
 }
 
 .header {
-    background-image: url('../image/wallpaper.jpg');
+    background:  linear-gradient(
+        rgba(46, 5, 75, 0.5),rgba(40, 6, 65, 0.5)
+      ),url('../image/wallpaper.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -14,7 +16,7 @@
 }
 
 #logar {
-    background-color: gray;
+    background-color: #6958a7;
     border-radius: 10px;
 }
 
@@ -32,7 +34,7 @@
 .titulo button{
     border: none;
     border-radius: 20px;
-    color: gray;
+    color: #0c1774;
     padding: 10px 30px;
     margin-top: 30px;
     cursor: pointer;
@@ -74,7 +76,7 @@
     width: 70%;
     height: 70vh;
     margin-top: 150px;
-    box-shadow: #9f9f9f 4px 4px 10px;
+    box-shadow:#a29ddc 4px 4px 10px;
 }/* Area para remover o fundo*/
 
 .botao {
@@ -87,8 +89,8 @@
     padding: 10px 55px;
     border-radius: 40px;
     font-size: 20px;
-    background-color: #d2d2d2;
-    box-shadow: #9f9f9f 4px 4px 10px;
+    background-color:#a29ddc;
+    box-shadow:  #a29ddc 4px 4px 10px;
    
 }/*Estilização do botão do edit*/
 
@@ -103,8 +105,8 @@
     border: none;
     border-radius: 40px;
     font-size: 20px;
-    background-color: #d2d2d2;
-    box-shadow: #9f9f9f 4px 4px 10px;
+    background-color:#a29ddc;
+    box-shadow: #a29ddc 4px 4px 10px;
     padding: 10px 55px;
 }/*Butão de remover fundo*/
 
@@ -257,7 +259,9 @@ section.ondas-box {
 /*Footer*/
 
 .footer{
-    background-image: url('../image/wallpaper.jpg');
+    background:  linear-gradient(
+        rgba(46, 5, 75, 0.5),rgba(40, 6, 65, 0.5)
+      ),url('../image/wallpaper.jpg');
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
