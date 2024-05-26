@@ -1,15 +1,13 @@
 package br.com.cc.cleancut.controllers;
 
+import br.com.cc.cleancut.model.User;
 import br.com.cc.cleancut.services.ImageService;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -28,7 +26,7 @@ public class ImageController {
     }
 
     @GetMapping("/remove-background")
-    public ModelAndView edit(){
+    public ModelAndView edit() {
         ModelAndView mv = new ModelAndView("pages/editor");
 
         return mv;
@@ -36,8 +34,9 @@ public class ImageController {
 
     @PostMapping("/remove-background")
     public ModelAndView removeBackground(@RequestParam("imageFile") MultipartFile file,
-                                   @RequestParam("isPrivate") String isPrivateStr,
-                                   RedirectAttributes redirectAttributes) {
+                                         @RequestParam("isPrivate") String isPrivateStr,
+                                         @SessionAttribute("loggedUser") User loggedUser,
+                                         RedirectAttributes redirectAttributes) {
         Boolean isPrivate = Boolean.parseBoolean(isPrivateStr);
         String imageUrl = "";
 
@@ -49,7 +48,7 @@ public class ImageController {
             image.setData(bytes);
             image.setIsPrivate(isPrivate);
 
-            imageService.saveImage(image);
+            imageService.saveImage(image, loggedUser);
             imageUrl = "/images/" + image.getId();
 
         } catch (IOException e) {
@@ -62,10 +61,10 @@ public class ImageController {
     }
 
     @GetMapping("/images/{id}")
-    public ResponseEntity<byte[]> getImage(@PathVariable Long id){
+    public ResponseEntity<byte[]> getImage(@PathVariable Long id) {
         Image image = imageService.getImageById(id);
 
-        if(image != null){
+        if (image != null) {
             HttpHeaders headers = new HttpHeaders();
             headers.set("Content-Type", "image/jpeg");
             return new ResponseEntity<>(image.getData(), headers, HttpStatus.OK);

@@ -1,6 +1,7 @@
 package br.com.cc.cleancut.services;
 
 import br.com.cc.cleancut.model.Image;
+import br.com.cc.cleancut.model.User;
 import br.com.cc.cleancut.repositories.ImageRepository;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +18,8 @@ public class ImageService {
         this.imageProcessingService = imageProcessingService;
     }
 
-    public void saveImage(Image image) {
+    public void saveImage(Image image, User user) {
+        image.setUser(user);
         imageRepository.save(removeBackground(image));
     }
 
