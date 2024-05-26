@@ -27,7 +27,7 @@ public class ImageController {
         this.imageService = imageService;
     }
 
-    @GetMapping("/edit")
+    @GetMapping("/remove-background")
     public ModelAndView edit(){
         ModelAndView mv = new ModelAndView("pages/editor");
 
