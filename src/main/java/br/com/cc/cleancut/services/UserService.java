@@ -16,10 +16,13 @@ public class UserService {
         this.passwordService = passwordService;
     }
 
-    public User save(User user) {
-
+    public User save(User user, String confirmPassword) {
         if (userRepository.existsByEmail(user.getEmail())) {
-            throw new RuntimeException("User already exists");
+            throw new RuntimeException("Usuário já existe");
+        }
+
+        if(!user.getPassword().equals(confirmPassword)) {
+            throw new RuntimeException("As senhas não coincidem");
         }
 
         user.setPassword(passwordService.encrypt(user.getPassword()));
