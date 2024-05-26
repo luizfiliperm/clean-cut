@@ -22,27 +22,5 @@ public class IndexController {
 
         return mv;
     }
-    
-    @GetMapping("/login")
-    public ModelAndView login() {
-        ModelAndView mv = new ModelAndView("index");
-       User user = new User();
-       user.setEmail("jpsoares16@hotmail.com");
-       user.setPassword("123456");
-       user.setName("tuamae");
-       userService.save(user);
-        return mv;
-    }
-
-    
-
-    @GetMapping("/editor")
-    public ModelAndView editor() {
-        ModelAndView mv = new ModelAndView("pages/editor");
-       
-
-        return mv;
-    }
-
 
 } 
