@@ -36,4 +36,13 @@ public class IndexController {
 
     
 
+    @GetMapping("/editor")
+    public ModelAndView editor() {
+        ModelAndView mv = new ModelAndView("pages/editor");
+       
+
+        return mv;
+    }
+
+
 } 
