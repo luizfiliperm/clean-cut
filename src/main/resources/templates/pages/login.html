@@ -23,7 +23,9 @@
             <div class="form-message-container">
                 <span>Ou use seu email e senha.</span>
             </div>
-
+            <div th:if="${error}" class="error-message">
+                <p th:text="${error}"></p>
+            </div>
             <form>
                 <input class="areaInput" type="email" placeholder="Email" required>
                 <input class="areaInput" type="password" placeholder="Password" required>
@@ -50,11 +52,15 @@
                 <span>Ou use seu email e senha.</span>
             </div>
 
-            <form>
-                <input class="areaInput" type="text" placeholder="Name" required>
-                <input class="areaInput" type="email" placeholder="Email" required>
-                <input class="areaInput" type="password" placeholder="Password" required>
-                <input class="areaInput" type="password" placeholder="Confirm Password" required>
+            <div th:if="${error}" class="error-message">
+                <p th:text="${error}"></p>
+            </div>
+
+            <form th:action="@{/register}" method="post">
+                <input name="name" class="areaInput" type="text" placeholder="Name" required>
+                <input name="email" class="areaInput" type="email" placeholder="Email" required>
+                <input name="password" class="areaInput" type="password" placeholder="Password" required>
+                <input name="confirmPassword" class="areaInput" type="password" placeholder="Confirm Password" required>
                 <button class="botaoLogin"><a href="/index.html" class="btnLogin">Criar conta</a></button>
             </form>
 
