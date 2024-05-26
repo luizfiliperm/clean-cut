@@ -13,22 +13,28 @@
         Edite sua foto
         </h1>
 
-        <div class="remover-fundo"> 
-            <img src="../image/backgroundTransparent.jpg" alt="">
+        <div class="remover-fundo">
+            <div th:if="${imageUrl != null}">
+                <img th:src="${imageUrl}" alt=""  width="300">
+            </div>
+            <div th:unless="${imageUrl}">
+                <img src='../image/backgroundTransparent.jpg' alt="">
+            </div>
+
             
             <div class="botao-remover">
                 
-                <form class="form-enviar-imagem">
-                    <input type="file" name="imageFile" id="inputImage" required>
+                <form th:action="@{/remove-background}" class="form-enviar-imagem" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="imageFile" id="inputImage" required accept=".jpg, .jpeg">
 
                     
                     <div class="select-container-privado">
-                        <input type="radio" id="private" name="isPrivate" value="true">
+                        <input type="radio" id="private" name="isPrivate" value="true" required>
                         <label for="private">Tornar foto privada</label>
                     </div>
 
                     <div class="select-container-publico">
-                        <input type="radio" id="public" name="isPrivate" value="false">
+                        <input type="radio" id="public" name="isPrivate" value="false" required>
                         <label for="public">Tornar foto pública</label>
                     </div>
 
@@ -54,6 +60,6 @@
     <script src="https://kit.fontawesome.com/de140a3406.js" crossorigin="anonymous"></script> <!--Icons-->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> <!--Bootstrap-->
-    
+
 </body>
 </html>
