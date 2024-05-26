@@ -45,4 +45,11 @@ public class IndexController {
     }
 
 
+    @GetMapping("/perfil")
+    public ModelAndView perfil() {
+        ModelAndView mv = new ModelAndView("pages/perfil");
+       
+
+        return mv;
+    }
 } 
