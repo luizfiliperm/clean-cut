@@ -1,0 +1,136 @@
+* {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b3be1dae-3caa-4d45-be6c-3de586ba95e2/dg4kfy9-179f63df-8e69-424d-852e-f26b678d7739.jpg/v1/fill/w_1192,h_670,q_70,strp/summer_sundown_by_bisbiswas_dg4kfy9-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvYjNiZTFkYWUtM2NhYS00ZDQ1LWJlNmMtM2RlNTg2YmE5NWUyXC9kZzRrZnk5LTE3OWY2M2RmLThlNjktNDI0ZC04NTJlLWYyNmI2NzhkNzczOS5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.XYVO3TDFMNbqVgizpDzJY3Rh7B57qdXd69YpkIHaz8g) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.login-container {
+    width: 380px;
+    background:transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(9px);
+    border-radius: 14px;
+    padding: 30px 40px;
+}
+
+.login-container h1{
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.social-icons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-icons .icon {
+    display: inline-block;
+    font-size: 20px;
+    margin: 0 10px;
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 16px;
+    padding: 7px 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons .icon:hover {
+    color: #c2c2c2;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+
+input,
+button{
+    width: 100%;
+    height: 100%;
+    height: 50px;
+    margin: 10px 0;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 60px;
+    font-size: 15px;
+    text-indent: 15px;
+}
+.areaInput{
+    margin-top: 10px
+}
+
+.botaoLogin{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 60px;
+}
+
+input::placeholder{
+    color: white;
+    text-indent: 15px;
+}
+
+input:focus,
+button:focus {
+    border-color: transparent;
+}
+
+button{
+    background-color: #3e5bee;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+button:hover{
+    background-color:#8394c9;
+}
+
+a {
+    margin-top: 10px;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+p {
+    font-size: 13px;
+    text-align: center;
+}
+
+.btnLogin {
+
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
