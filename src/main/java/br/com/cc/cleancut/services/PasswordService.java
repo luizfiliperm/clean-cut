@@ -11,6 +11,12 @@ public class PasswordService {
 
         String encryptedPassword = password;
         encryptedPassword = BCrypt.withDefaults().hashToString(12, password.toCharArray());
-        return encryptedPassword;    
+        return encryptedPassword;
     }
+
+    public boolean check(String password, String userPassword) {
+        BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), userPassword);
+        return result.verified;
+    }
+
 }
