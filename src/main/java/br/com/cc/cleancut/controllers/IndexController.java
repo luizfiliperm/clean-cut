@@ -34,7 +34,13 @@ public class IndexController {
         return mv;
     }
 
-    
+    @GetMapping("/auth")
+    public ModelAndView auth() {
+        ModelAndView mv = new ModelAndView("pages/login");
+       
+
+        return mv;
+    }
 
     @GetMapping("/editor")
     public ModelAndView editor() {
