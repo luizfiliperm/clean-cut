@@ -26,10 +26,10 @@
             <div th:if="${error}" class="error-message">
                 <p th:text="${error}"></p>
             </div>
-            <form>
-                <input class="areaInput" type="email" placeholder="Email" required>
-                <input class="areaInput" type="password" placeholder="Password" required>
-                <button class="botaoLogin"><a href="/index.html" class="btnLogin" required>Login</a></button>
+            <form th:action="@{/login}" method="post">
+                <input name="email" class="areaInput" type="email" placeholder="Email" required>
+                <input name="password" class="areaInput" type="password" placeholder="Password" required>
+                <button class="botaoLogin">Login</button>
             </form>
 
             <p>
@@ -61,7 +61,7 @@
                 <input name="email" class="areaInput" type="email" placeholder="Email" required>
                 <input name="password" class="areaInput" type="password" placeholder="Password" required>
                 <input name="confirmPassword" class="areaInput" type="password" placeholder="Confirm Password" required>
-                <button class="botaoLogin"><a href="/index.html" class="btnLogin">Criar conta</a></button>
+                <button class="botaoLogin">Criar conta</button>
             </form>
 
             <p>Voce ja tem uma conta? <a href="#" id="showLogin">login</a></p>
