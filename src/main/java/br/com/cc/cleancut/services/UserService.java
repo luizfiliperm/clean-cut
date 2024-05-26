@@ -16,12 +16,12 @@ public class UserService {
         this.passwordService = passwordService;
     }
 
-    public User save(User user, String confirmPassword) {
+    public User register(User user, String confirmPassword) {
         if (userRepository.existsByEmail(user.getEmail())) {
             throw new RuntimeException("Usuário já existe");
         }
 
-        if(!user.getPassword().equals(confirmPassword)) {
+        if (!user.getPassword().equals(confirmPassword)) {
             throw new RuntimeException("As senhas não coincidem");
         }
 
@@ -29,8 +29,20 @@ public class UserService {
         return userRepository.save(user);
     }
 
+    public User login(String email, String password) {
+        User user = userRepository.findByEmail(email);
+
+        if (user == null) {
+            throw new RuntimeException("Usuário não encontrado");
+        }
+
+        if (!passwordService.check(password, user.getPassword())) {
+            throw new RuntimeException("Senha incorreta");
+        }
+
+        return user;
+    }
 
 
-    
 }
 
