@@ -15,6 +15,15 @@ public class IndexController {
         return mv;
     }
 
+    @GetMapping("/editor")
+    public ModelAndView editor() {
+        ModelAndView mv = new ModelAndView("pages/editor");
+       
+
+        return mv;
+    }
+
+
     @GetMapping("/perfil")
     public ModelAndView perfil() {
         ModelAndView mv = new ModelAndView("pages/perfil");
