@@ -12,7 +12,7 @@ import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@SessionAttributes("loggedUser") // Armazena "loggedUser" na sessão
+@SessionAttributes("loggedUser")
 public class AuthController {
 
     private final UserService userService;
@@ -22,25 +22,16 @@ public class AuthController {
     }
 
     @GetMapping("/auth")
-    public ModelAndView login() {
+    public ModelAndView loginPage() {
         return new ModelAndView("pages/authentication");
     }
 
-    @PostMapping("/register")
-    public ModelAndView register(
-            @RequestParam("name") String name,
-            @RequestParam("email") String email,
-            @RequestParam("password") String password,
-            @RequestParam("confirmPassword") String confirmPassword,
-            Model model) {
-
+    @PostMapping("/login")
+    public ModelAndView login(@RequestParam("email") String email,
+                              @RequestParam("password") String password,
+                              Model model) {
         try {
-            User user = new User();
-            user.setName(name);
-            user.setEmail(email);
-            user.setPassword(password);
-
-            userService.register(user, confirmPassword);
+            User user = userService.login(email, password);
             model.addAttribute("loggedUser", user);
             return new ModelAndView("redirect:/");
         } catch (RuntimeException e) {
@@ -50,13 +41,19 @@ public class AuthController {
         }
     }
 
-    @PostMapping("/login")
-    public ModelAndView login(@RequestParam("email") String email,
-                              @RequestParam("password") String password,
-                              Model model) {
+    @PostMapping("/register")
+    public ModelAndView register(@RequestParam("name") String name,
+                                 @RequestParam("email") String email,
+                                 @RequestParam("password") String password,
+                                 @RequestParam("confirmPassword") String confirmPassword,
+                                 Model model) {
         try {
-            // Autentica o usuário
-            User user = userService.login(email, password);
+            User user = new User();
+            user.setName(name);
+            user.setEmail(email);
+            user.setPassword(password);
+
+            userService.register(user, confirmPassword);
             model.addAttribute("loggedUser", user);
             return new ModelAndView("redirect:/");
         } catch (RuntimeException e) {
