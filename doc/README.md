@@ -16,10 +16,9 @@
 |          3. Remover fundo da imagem         |       3. Interface Intuitiva       |
 |       4. Definir privacidade da imagem      |                                    |
 |         5. Visualizar minhas imagens        |                                    |
-|   6. Visualizar imagens de outros usuário   |                                    |
-|        7. Substituir fundo da imagem        |                                    |
-| 8. Vizualizar imagens públicas em descobrir |                                    |
-|               9. Fazer Logout               |                                    |
+| 6. Vizualizar imagens públicas em descobrir |                                    |
+|               7. Fazer Logout               |                                    |
+|         8. Fazer download da imagem         |                                    |
 
 ## Diagrama de Classes
 
@@ -30,8 +29,9 @@
 1. HTML / CSS / JS - linguagens web / front end
 2. Bootstrap - framework de estilização
 3. Springboot - framework backend
-4. Thymeleaf - integração front end e back end
-5. MySQL - banco de dados
+4. Open cv - biblioteca de processamento de imagens
+5. Thymeleaf - integração front end e back end
+6. MySQL - banco de dados
 
 ## Ambiente de Deploy
 A ainda definir
@@ -134,7 +134,7 @@ A ainda definir
 - Quando eu clico em uma imagem
 - Então vejo detalhes de edição para essa imagem.
 
-## 6 - Vizualizar Imagens de Outros Usuários
+## 6 - Vizualizar Imagens Públicas em Descobrir
 ### História de Usuário
 - Como um usuário
 - Quero visualizar imagens de outros usuários
@@ -146,27 +146,11 @@ A ainda definir
 
 ### Cenários de Execução
 - Dado que estou na página principal da minha conta
-- Quando eu navego para a secão "Descobrir"
+- Quando eu navego para a seção "Descobrir"
 - Então eu vejo uma galeria de imagens públicas de outros usuários.
 
-## 7 - Substituir Fundo da Imagem
+## 7 - Visualizar imagens públicas em Descobrir
 ### História de Usuário
-- Como usuário
-- Quero substituir o fundo de uma imagem minha
-- Para criar novas versões das minhas imagens com fundos diferentes.
 
-### Critérios de Aceite
-1. O sistema deve permitir ao usuário carregar uma nova imagem de fundo.
-2. O sistema deve aplicar o novo fundo à imagem original.
 
-### Cenários de Execução
-- Dado que estou na página de edição de imagens
-- Quando eu faço upload de uma nova imagem de fundo e clico no botão "Substituir Fundo"
-- Então vejo a imagem original com o novo fundo aplicado.
-<br>
-
-- Dado que estou na página de edição de imagens
-- Quando eu faço upload de uma nova imagem de fundo em um formato não suportado e clico no botão "Substituir Fundo"
-- Então vejo uma mensagem de erro informando que o formato da imagem não é suportado.
-
-## 8
+## 8 - 
