@@ -183,3 +183,9 @@ A ainda definir
 - Dado que estou na página de "remover o fundo da imagem"
 - Quando eu clico no botão "Fazer download"
 - Então o sistema baixa a imagem já editada na minha máquina.
+
+## Protótipo e Regras de Negócio
+
+### Tela inicial do site:
+![image](https://github.com/luizfiliperm/clean-cut/assets/87551407/8fab7f1d-a4f0-4d18-aad9-9fc10af16b0d)
+
