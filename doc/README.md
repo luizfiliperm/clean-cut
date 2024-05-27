@@ -184,7 +184,9 @@ A ainda definir
 - Quando eu clico no botão "Fazer download"
 - Então o sistema baixa a imagem já editada na minha máquina.
 
-## Protótipo e Regras de Negócio
+## Telas de Prototipação
+
+Atenção: Essas telas não representam a aparência final do site
 
 ### Primeiro Protótipo da Tela inicial do site:
 ![image](https://github.com/luizfiliperm/clean-cut/assets/87551407/8fab7f1d-a4f0-4d18-aad9-9fc10af16b0d)
