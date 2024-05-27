@@ -15,35 +15,26 @@
 
            <div class="nome-usuario">
                <p>Hi! </p>
-               <p class="nome">Usuario</p>   
+               <p class="nome" th:text="${loggedUser.getName()}">Usuario</p>
                <button>editar</button>
            </div>
         </div>
 
         <div class="info-curtidas-donwloads">
-            <p>100 <span>curtidas</span></p>
-            <p>100 <span>donwloads</span></p>
-            <p>100 <span>imagens</span></p>
+            <p><span th:text="${totalLikes}">100</span> <span>curtidas</span></p>
+            <p><span th:text="${totalDownloads}">100</span> <span>downloads</span></p>
+            <p><span th:text="${totalImages}">100</span> <span>imagens</span></p>
         </div>
     </div>
 
     <div class="container-imagens-usuario">
     
         <div class="imagens-upadas">
-            <div class="cards-imagem">
-                <img src="https://i.pinimg.com/564x/48/9c/61/489c611c72a7ceecb15bfe4f90182418.jpg" alt="">
+            <div class="cards-imagem" th:each="imageId : ${imagesIds}">
+                <img th:src="'/images/' + ${imageId}" alt="Imagem do usuário"/>
             </div>
-
-
         </div>
     </div>
-
-
-
-
-
-
-
     <footer th:replace ="~{base :: footer}"></footer>
 
     
