@@ -23,11 +23,4 @@ public class IndexController {
         return mv;
     }
 
-    @GetMapping("/perfil")
-    public ModelAndView perfil() {
-        ModelAndView mv = new ModelAndView("pages/perfil");
-       
-
-        return mv;
-    }
 } 
