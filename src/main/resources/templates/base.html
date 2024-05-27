@@ -22,13 +22,13 @@
                             <a class="nav-link" aria-current="page" th:href="@{/}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" th:href="${loggedUser != null ? '/perfil' : '/auth'}">Galeria</a>
+                            <a class="nav-link" th:href="@{/perfil}">Galeria</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" th:href="${loggedUser != null ? '#' : '/auth'}">Descobrir</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" th:href="${loggedUser != null ? '/remove-background' : '/auth'}">Editar</a>
+                            <a class="nav-link" th:href="@{/remove-background}">Editar</a>
                         </li>
                         <li th:unless="${loggedUser}" class="nav-item" id = "logar">
                             <a class="nav-link active" th:href="@{/auth}">Entrar</a>
