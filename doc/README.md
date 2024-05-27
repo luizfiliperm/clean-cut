@@ -45,7 +45,7 @@ A ainda definir
 
 ### Critérios de Aceite
 1. O sistema deve permitir ao usuário inserir um nome de usuário, email e senha. 
-2. O sistema deve verificar de essa conta já existe. 
+2. O sistema deve verificar se essa conta já existe. 
 3. A senha deve ser inserida duas vezes para confirmar. 
 
 ### Cenário de Execução
@@ -149,8 +149,37 @@ A ainda definir
 - Quando eu navego para a seção "Descobrir"
 - Então eu vejo uma galeria de imagens públicas de outros usuários.
 
-## 7 - Visualizar imagens públicas em Descobrir
-### História de Usuário
+## 7 - Fazer Logout
+### Histórias de Usuário
+- Como um usuário
+- Quero fazer logout da minha conta
+- Para fazer login em uma outra conta.
 
+### Critérios de Aceite
+1. O sistema deve fornecer uma opção clara de logout.
+2. O logout deve encerrar a sessão do usuário e redirecioná-lo para a página de login.
 
-## 8 - 
+### Cenários de Execução
+- Dado que estou logado na minha conta
+- Quando eu clico no botão "Logout"
+- Então minha sessão é encerrada e sou redirecionado para a página de login.
+<br>
+
+- Dado que estou logado na minha conta
+- Quando eu tento acessar uma página que requer login
+- Então sou redirecionado para a página de login.
+
+## 8 - Fazer download da Imagem
+### Históra de Usuário
+- Como um usuário
+- Quero fazer um download da imagem já editada
+- Para tê-la salva em minha máquina pessoal.
+
+### Critérios de Aceite
+1. O sistema deve fornecer um botão com uma opção para fazer o download da imagem.
+2. O sistema deve fazer um download da imagem em .jpg na máquina do usuário.
+
+### Cenários de Execução
+- Dado que estou na página de "remover o fundo da imagem"
+- Quando eu clico no botão "Fazer download"
+- Então o sistema baixa a imagem já editada na minha máquina.
