@@ -5,6 +5,8 @@ import br.com.cc.cleancut.model.User;
 import br.com.cc.cleancut.repositories.ImageRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 public class ImageService {
@@ -30,5 +32,21 @@ public class ImageService {
     public Image removeBackground(Image image){
         image = imageProcessingService.removeBackground(image);
         return image;
+    }
+
+    public List<Long> findAllUserImages(Long userId){
+        return imageRepository.getAllIds(userId);
+    }
+
+    public Long countImagesByUserId(Long userId){
+        return imageRepository.countImageByUserId(userId);
+    }
+
+    public Long countTotalLikes(Long userId){
+        return imageRepository.countTotalLikes(userId);
+    }
+
+    public Long countTotalDownloads(Long userId){
+        return imageRepository.countTotalDownloads(userId);
     }
 }
