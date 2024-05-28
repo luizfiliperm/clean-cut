@@ -16,7 +16,7 @@
            <div class="nome-usuario">
                <p>Hi! </p>
                <p class="nome" th:text="${loggedUser.getName()}">Usuario</p>
-               <button>editar</button>
+               
            </div>
         </div>
 
@@ -27,14 +27,21 @@
         </div>
     </div>
 
-    <div class="container-imagens-usuario">
-    
-        <div class="imagens-upadas">
-            <div class="cards-imagem" th:each="imageId : ${imagesIds}">
-                <img th:src="'/images/' + ${imageId}" alt="Imagem do usuário"/>
+   
+    <div class="cardContainer-user"> 
+ 
+        <div class="box-container-user">
+            <div class="box-user">
+                <img src="https://i.pinimg.com/564x/dd/7d/97/dd7d973f3eaa5cc38ffa0af6d6fb23ec.jpg" alt="">
+                
+                <p>Curtidas <span class="curtidas-user">100</span></p> 
+                <a href="" class="botao-user"><i class="fa-solid fa-trash"></i></a> <a href="" class="botao-user"><i class="fa-solid fa-download"></i></a>
             </div>
+        
         </div>
     </div>
+
+
     <footer th:replace ="~{base :: footer}"></footer>
 
     

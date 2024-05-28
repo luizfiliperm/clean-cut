@@ -460,15 +460,6 @@ section.ondas-box {
     margin: 5px 10px;
 }
 
-.nome-usuario button{
-    font-size: 13px;
-    margin: 0px 5px;
-    border-radius: 20px;
-    padding: 5px 7px;
-    color: white;
-    background-color: #a29ddc;
-}
-
 .info-curtidas-donwloads{
     display: flex;
     flex-direction: row;
@@ -490,30 +481,65 @@ section.ondas-box {
 }
 
 
+.cardContainer-user {
+    padding: 15px 35px;
+    padding-bottom: 100px;
 
-.container-imagens-usuario {
-    background-image: linear-gradient(
-        rgba(46, 5, 75, 0.5),rgba(40, 6, 65, 0.5)
-      ),url("../image/wallpaper.jpg");
-    margin: 20px 50px;
-    border-radius: 20px;
+    outline: none;
+    text-decoration: none;
+    transition: .2s linear;
+
 }
 
-.container-imagens-usuario .imagens-upadas {
+.cardContainer-user .box-container-user {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(470px, 1fr));
+    gap: 20px;
+}
+
+.cardContainer-user .box-container-user .box-user {
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    border-radius: 5px;
+    background: #f5f5f5;
+    text-align: center;
     padding: 20px 20px;
 }
 
-.container-imagens-usuario .imagens-upadas .cards-imagem{
-    text-align: center;
-    
+.cardContainer-user .box-container-user .box-user img {
+    height: 250px;
 }
 
-.container-imagens-usuario .imagens-upadas .cards-imagem img {
-    height: 150px;
-    
+.cardContainer-user .box-container-user .box-user p {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    color: rgb(18, 18, 18);
+    line-height: 1.8;
 }
+
+.cardContainer-user .box-container-user .box-user span{
+    font-size: 14px;
+    color: gray;
+}
+
+.cardContainer-user .box-container-user .box-user .botao-user {
+    display: inline-block;
+    color: #000000;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 8px 25px;
+}
+
+.cardContainer-user .box-container-user .box-user:hover {
+    box-shadow: 0 10px 15px rgba(0,0,0,.2);;
+    transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+    .cardContainer-user{
+        padding: 20px;
+    }
+}
+
 
 /*Tela de perfil de usuario ↑*/
