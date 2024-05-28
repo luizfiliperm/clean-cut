@@ -71,4 +71,8 @@ public class ImageService {
         explorerDto.setImageDtoList(imageDtoList);
         return explorerDto;
     }
+
+    public void deleteImage(Long imageId) {
+        imageRepository.deleteById(imageId);
+    }
 }

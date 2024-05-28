@@ -73,4 +73,11 @@ public class ImageController {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
+    @DeleteMapping("/images/{id}")
+    public ResponseEntity<Void> deleteImage(@PathVariable Long id) {
+
+        imageService.deleteImage(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
 }
