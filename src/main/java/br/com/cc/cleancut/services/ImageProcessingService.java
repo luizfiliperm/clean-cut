@@ -1,72 +1,78 @@
 package br.com.cc.cleancut.services;
 
 import br.com.cc.cleancut.model.Image;
-import org.opencv.core.*;
-import org.opencv.highgui.HighGui;
-import org.opencv.imgcodecs.Imgcodecs;
-import org.opencv.imgproc.Imgproc;
+import com.aspose.imaging.Color;
+import com.aspose.imaging.RasterImage;
+import com.aspose.imaging.fileformats.png.PngColorType;
+import com.aspose.imaging.imageoptions.PngOptions;
+import com.aspose.imaging.masking.ImageMasking;
+import com.aspose.imaging.masking.options.AutoMaskingGraphCutOptions;
+import com.aspose.imaging.masking.options.SegmentationMethod;
+import com.aspose.imaging.masking.result.MaskingResult;
+import com.aspose.imaging.sources.FileCreateSource;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.opencv.core.CvType.CV_8UC3;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
 
 @Service
 public class ImageProcessingService {
 
-    static {
-        nu.pattern.OpenCV.loadLocally();
+    public Image removeBackground(Image inputImage) {
+        MaskingResult results;
+        try {
+
+            RasterImage asposeImage = convertToAsposeImage(inputImage.getData());
+
+
+            AutoMaskingGraphCutOptions options = new AutoMaskingGraphCutOptions();
+
+            options.setCalculateDefaultStrokes(true);
+
+            options.setFeatheringRadius((Math.max(asposeImage.getWidth(), asposeImage.getHeight()) / 500) + 1);
+            options.setMethod(SegmentationMethod.GraphCut);
+            options.setDecompose(false);
+            options.setBackgroundReplacementColor(Color.getTransparent());
+
+
+            PngOptions exportOptions = new PngOptions();
+            exportOptions.setColorType(PngColorType.TruecolorWithAlpha);
+            exportOptions.setSource(new FileCreateSource("tempFile"));
+            options.setExportOptions(exportOptions);
+
+            results = new ImageMasking(asposeImage).decompose(options);
+
+
+            try (RasterImage resultImage = results.get_Item(1).getImage()) {
+                exportOptions = new PngOptions();
+                exportOptions.setColorType(PngColorType.TruecolorWithAlpha);
+                return convertToImage(resultImage, inputImage);
+            }
+
+
+        } catch (Exception ex) {
+
+            ex.printStackTrace();
+            return null;
+        }
     }
 
-    public Image removeBackground(Image image){
-        Mat src = byteToMat(image.getData());
+    private RasterImage convertToAsposeImage(byte[] bytes) {
+        try (InputStream inputStream = new ByteArrayInputStream(bytes)) {
+            return (RasterImage) com.aspose.imaging.Image.load(inputStream, new com.aspose.imaging.imageloadoptions.PngLoadOptions());
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return null;
+        }
+    }
 
-        Mat finalImage = removeBackground(src);
 
-        image.setData(matToByte(finalImage));
+    private Image convertToImage(RasterImage rasterImage, Image image) {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        rasterImage.save(outputStream);
+        byte[] resultBytes = outputStream.toByteArray();
+        image.setData(resultBytes);
         return image;
     }
-
-    private Mat byteToMat(byte[] bytes){
-        Mat mat = new Mat();
-        MatOfByte matOfByte = new MatOfByte(bytes);
-        mat = Imgcodecs.imdecode(matOfByte, Imgcodecs.IMREAD_COLOR);
-        return mat;
-    }
-
-    private byte[] matToByte(Mat mat){
-        MatOfByte matOfByte = new MatOfByte();
-        Imgcodecs.imencode(".jpg", mat, matOfByte);
-        return matOfByte.toArray();
-    }
-
-    private Mat removeBackground(Mat myImage) {
-
-        Mat myImageGrey = new Mat();
-        Imgproc.cvtColor(myImage, myImageGrey, Imgproc.COLOR_BGR2GRAY);
-
-        Mat baseline = new Mat();
-        Imgproc.threshold(myImageGrey, baseline, 127, 255, Imgproc.THRESH_TRUNC);
-
-        Mat background = new Mat();
-        Imgproc.threshold(baseline, background, 126, 255, Imgproc.THRESH_BINARY);
-
-        Mat foreground = new Mat();
-        Imgproc.threshold(baseline, foreground, 126, 255, Imgproc.THRESH_BINARY_INV);
-
-
-        Mat foregroundImage = new Mat();
-        Core.bitwise_and(myImage, myImage, foregroundImage, foreground);
-
-
-        Mat backgroundBGR = new Mat();
-        Imgproc.cvtColor(background, backgroundBGR, Imgproc.COLOR_GRAY2BGR);
-
-        Mat finalImage = new Mat();
-        Core.add(backgroundBGR, foregroundImage, finalImage);
-
-        return finalImage;
-    }
-
 }
