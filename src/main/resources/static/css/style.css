@@ -517,3 +517,19 @@ section.ondas-box {
 }
 
 /*Tela de perfil de usuario ↑*/
+
+/*Estilização de pagina não encontrada*/
+
+.container-not-found{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-not-found h1 {
+    font-size: 50px;
+    margin-bottom: 40px;
+    margin-top: 60px;
+    
+}
