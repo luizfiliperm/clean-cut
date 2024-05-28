@@ -33,7 +33,8 @@
 5. Thymeleaf - integração front end e back end
 6. MySQL - banco de dados
 
-// Aqui seria o Ambiente de Deploy
+## Ambiente de Deploy
+Nuvem no DigitalOcean
 
 ## Metodologia RProcess
 ## 1 - Registrar Usuário
