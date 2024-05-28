@@ -32,7 +32,6 @@ public class ImageProcessingService {
                 }
             };
 
-
             MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
             body.add("image", imageResource);
 
@@ -41,10 +40,8 @@ public class ImageProcessingService {
 
             HttpEntity<MultiValueMap<String, Object>> requestEntity = new HttpEntity<>(body, headers);
 
-            // Send the request to the API
             ResponseEntity<byte[]> response = restTemplate.postForEntity(apiUrl, requestEntity, byte[].class);
 
-            // Check the response status and update the image data if successful
             if (response.getStatusCode() == HttpStatus.OK) {
                 byte[] responseData = response.getBody();
                 if (responseData != null) {
