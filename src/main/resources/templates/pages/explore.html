@@ -10,47 +10,14 @@
     <div class="cardContainer">
         <h1 class="heading">Explore</h1>
         <div class="box-container">
-            <div class="box">
-                <img src="https://i.pinimg.com/564x/dd/7d/97/dd7d973f3eaa5cc38ffa0af6d6fb23ec.jpg" alt="">
-                <h3>User</h3>
-                <p>Curtidas <span class="curtidas">100</span></p> 
-                <a href="" class="botao-explore"><i class="fa-regular fa-heart"></i></a> <a href="" class="botao-explore"><i class="fa-solid fa-download"></i></a>
+            <div th:each="image : ${explorer.getImageDtoList()}" class="box">
+                <img th:src="'/images/' + ${image.imageId}" alt="Image">
+                <h3 th:text="${image.userName}">User</h3>
+                <p>Curtidas <span class="curtidas" th:text="${image.imageLikes}">100</span></p>
+                <a href="" class="botao-explore"><i class="fa-regular fa-heart"></i></a>
+                <a href="" class="botao-explore"><i class="fa-solid fa-download"></i></a>
             </div>
 
-            <div class="box">
-                <img src="https://i.pinimg.com/564x/40/e9/ef/40e9ef4fb18879f7b61ba91e24ccbad5.jpg" alt="">
-                <h3>User</h3>
-                <p>Curtidas <span class="curtidas">100</span></p> 
-                <a href="" class="botao-explore"><i class="fa-regular fa-heart"></i></a> <a href="" class="botao-explore"><i class="fa-solid fa-download"></i></a>
-            </div>
-
-            <div class="box">
-                <img src="https://i.pinimg.com/564x/a3/54/db/a354db2c16a7b8340f0b16051b830ec8.jpg" alt="">
-                <h3>User</h3>
-                <p>Curtidas <span class="curtidas">100</span></p> 
-                <a href="" class="botao-explore"><i class="fa-regular fa-heart"></i></a> <a href="" class="botao-explore"><i class="fa-solid fa-download"></i></a>
-            </div>
-
-            <div class="box">
-                <img src="https://i.pinimg.com/564x/a7/ea/db/a7eadbb57e30404bc9e2622352416998.jpg" alt="">
-                <h3>User</h3>
-                <p>Curtidas <span class="curtidas">100</span></p> 
-                <a href="" class="botao-explore"><i class="fa-regular fa-heart"></i></a> <a href="" class="botao-explore"><i class="fa-solid fa-download"></i></a>
-            </div>
-
-            <div class="box">
-                <img src="https://i.pinimg.com/564x/ad/5d/fb/ad5dfb8cb1a59d6c80d96e96613676ca.jpg" alt="">
-                <h3>User</h3>
-                <p>Curtidas <span class="curtidas">100</span></p> 
-                <a href="" class="botao-explore"><i class="fa-regular fa-heart"></i></a> <a href="" class="botao-explore"><i class="fa-solid fa-download"></i></a>
-            </div>
-
-            <div class="box">
-                <img src="https://i.pinimg.com/564x/57/f2/a0/57f2a0a6282c4da0d8d527d900819508.jpg" alt="">
-                <h3>User</h3>
-                <p>Curtidas <span class="curtidas">100</span></p> 
-                <a href="" class="botao-explore"><i class="fa-regular fa-heart"></i></a> <a href="" class="botao-explore"><i class="fa-solid fa-download"></i></a>
-            </div>
         </div>
         
     </div>

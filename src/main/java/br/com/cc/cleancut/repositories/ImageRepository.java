@@ -19,4 +19,10 @@ public interface ImageRepository extends JpaRepository<Image, Long> {
 
     @Query("SELECT COUNT(d) FROM Image i JOIN i.downloads d WHERE i.user.id = :userId")
     Long countTotalDownloads(Long userId);
+
+    @Query("SELECT i.id FROM Image i WHERE i.isPrivate = false AND i.user.id != :userId order by i.id desc")
+    List<Long> getExploreIds(Long userId);
+
+    @Query("SELECT u.name FROM Image i JOIN i.user u WHERE i.id = :imageId")
+    String findUserNameById(Long imageId);
 }
