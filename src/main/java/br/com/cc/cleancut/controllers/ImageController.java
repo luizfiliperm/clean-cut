@@ -66,7 +66,7 @@ public class ImageController {
 
         if (image != null) {
             HttpHeaders headers = new HttpHeaders();
-            headers.set("Content-Type", "image/jpeg");
+            headers.set("Content-Type", "image/png");
             return new ResponseEntity<>(image.getData(), headers, HttpStatus.OK);
         }
 
