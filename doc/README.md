@@ -29,7 +29,7 @@
 1. HTML / CSS / JS - linguagens web / front end
 2. Bootstrap - framework de estilização
 3. Springboot - framework backend
-4. Open cv - biblioteca de processamento de imagens
+4. [Open cv - biblioteca de processamento de imagens](https://github.com/danielgatis/rembg)
 5. Thymeleaf - integração front end e back end
 6. MySQL - banco de dados
 
