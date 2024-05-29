@@ -8,7 +8,7 @@ O sistema vai permitir que o usuário possa criar uma conta, fazer login e logou
 - HTML / CSS / JS - Linguagens web para desenvolvimento front-end.
 - Bootstrap - Framework de estilização.
 - Spring Boot - Framework back-end.
-- Open cv - biblioteca de processamento de imagens
+- [Rembg - Ia treinada para a remoção de backgrounds](https://github.com/danielgatis/rembg)
 - Thymeleaf - Integração entre front-end e back-end.
 - MySQL - Banco de dados.
 
@@ -27,3 +27,6 @@ acessar: http://localhost:8080/
 
 ## Estrutura do Projeto
 ![image](https://github.com/luizfiliperm/clean-cut/assets/87551407/6ea0a377-ade7-4402-9888-ac4666b52ee2)
+
+## Documentação
+Esta aplicação foi documentada seguindo o modelo RProccess, você pode acessá-la [aqui](https://github.com/luizfiliperm/clean-cut/tree/main/doc)!
