@@ -329,6 +329,15 @@ section.ondas-box {
     border-radius: 20px;
 }
 
+.botao-remover .form-enviar-imagem a {
+
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    
+}
+
 .select-container-publico {
     display: flex;
     flex-direction: row;
