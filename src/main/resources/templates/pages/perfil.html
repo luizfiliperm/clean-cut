@@ -37,7 +37,9 @@
                 <a href="#" class="botao-user" th:onclick="'deleteItem(event, \'/images/' + ${imageId} + '\')'">
                     <i class="fa-solid fa-trash"></i>
                 </a>
-                <a href="" class="botao-user"><i class="fa-solid fa-download"></i></a>
+                <a th:href="'/images/download/' + ${imageId}" class="botao-user">
+                    <i class="fa-solid fa-download"></i>
+                </a>
             </div>
 
         </div>
