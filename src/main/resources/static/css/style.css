@@ -563,3 +563,18 @@ section.ondas-box {
     margin-top: 60px;
     
 }
+
+.container-not-found p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+.container-not-found a {
+    text-decoration: none;
+    background-color: #6958a7;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+}
