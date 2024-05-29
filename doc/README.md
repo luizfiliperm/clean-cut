@@ -29,7 +29,7 @@
 1. HTML / CSS / JS - linguagens web / front end
 2. Bootstrap - framework de estilização
 3. Springboot - framework backend
-4. [Open cv - biblioteca de processamento de imagens](https://github.com/danielgatis/rembg)
+4. [Rembg - Ia treinada para a remoção de backgrounds](https://github.com/danielgatis/rembg)
 5. Thymeleaf - integração front end e back end
 6. MySQL - banco de dados
 
@@ -221,8 +221,8 @@ Atenção: Essas telas não representam a aparência final do site
 - [x] 014: Imagens marcadas como privadas só podem ser visualizadas pelo usuário que as carregou.
 - [x] 015: Imagens marcadas como públicas podem ser visualizadas por todos os usuários da plataforma.
 - [x] 016: O sistema deve listar todas as imagens carregadas pelo usuário na seção "Galeria".
-- [ ] 017: O usuário deve poder visualizar detalhes e opções de edição para cada imagem.
-- [ ] 018: O sistema deve permitir que os usuários naveguem por uma galeria de imagens públicas carregadas por outros usuários.
-- [ ] 019: O sistema deve fornecer uma opção para o usuário fazer o download de imagens editadas.
-- [ ] 020: As imagens devem ser disponibilizadas para download no formato .jpg.
-- [ ] 021: O sistema deve garantir que a imagem seja baixada na resolução original.
+- [x] 017: O usuário deve poder visualizar detalhes e opções de edição para cada imagem.
+- [x] 018: O sistema deve permitir que os usuários naveguem por uma galeria de imagens públicas carregadas por outros usuários.
+- [x] 019: O sistema deve fornecer uma opção para o usuário fazer o download de imagens editadas.
+- [x] 020: As imagens devem ser disponibilizadas para download no formato .png.
+- [x] 021: O sistema deve garantir que a imagem seja baixada na resolução original.
