@@ -14,7 +14,7 @@ O sistema vai permitir que o usuário possa criar uma conta, fazer login e logou
 
 ## Instalação da aplicação
 Clonar o repositório: git clone https://github.com/luizfiliperm/clean-cut.git
-Executar repositório: cd clean-cut
+Executar o comando: cd clean-cut
 
 Configurar o Banco de Dados mysql de acordo com o application.properties aqui:
 https://github.com/luizfiliperm/clean-cut/tree/main/src/main/resources
