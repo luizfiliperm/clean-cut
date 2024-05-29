@@ -13,16 +13,7 @@
         <div class="login-form" id="loginForm">
             <h1>Login</h1>
 
-            <div class="social-icons">
-                <a href="" class="icon"><i class="fa-brands fa-google"></i></a>
-                <a href="" class="icon"><i class="fa-brands fa-facebook"></i></a>
-                <a href="" class="icon"><i class="fa-brands fa-github"></i></a>
-                <a href="" class="icon"><i class="fa-brands fa-linkedin"></i></a>
-            </div>
-
-            <div class="form-message-container">
-                <span>Ou use seu email e senha.</span>
-            </div>
+           
             <div th:if="${error}" class="error-message">
                 <p th:text="${error}"></p>
             </div>
@@ -41,17 +32,7 @@
         <div class="signup-form hidden" id="signupForm">
             <h1>Crie uma conta</h1>
 
-            <div class="social-icons">
-                <a href="" class="icon"><i class="fa-brands fa-google"></i></a>
-                <a href="" class="icon"><i class="fa-brands fa-facebook"></i></a>
-                <a href="" class="icon"><i class="fa-brands fa-github"></i></a>
-                <a href="" class="icon"><i class="fa-brands fa-linkedin"></i></a>
-            </div>
-
-            <div class="form-message-container">
-                <span>Ou use seu email e senha.</span>
-            </div>
-
+           
             <div th:if="${error}" class="error-message">
                 <p th:text="${error}"></p>
             </div>

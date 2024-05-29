@@ -41,6 +41,11 @@
     cursor: pointer;
 }
 
+.titulo a {
+    text-decoration: none;
+    color: #0c1774;
+}
+
 /*Header  ↑ */
 
 .main{
@@ -80,20 +85,10 @@
     box-shadow:#a29ddc 4px 4px 10px;
 }/* Area para remover o fundo*/
 
-.botao {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    margin-top: 40px;
-    margin-bottom: 80px;
-    padding: 10px 55px;
-    border-radius: 40px;
-    font-size: 20px;
-    background-color:#a29ddc;
-    box-shadow:  #a29ddc 4px 4px 10px;
-   
-}/*Estilização do botão do edit*/
+.edit a {
+    text-decoration: none;
+    color: #0c1774;
+}
 
 #texto {
     margin: 5px;
