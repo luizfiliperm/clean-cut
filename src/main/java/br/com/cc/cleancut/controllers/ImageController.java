@@ -39,6 +39,7 @@ public class ImageController {
                                          RedirectAttributes redirectAttributes) {
         Boolean isPrivate = Boolean.parseBoolean(isPrivateStr);
         String imageUrl = "";
+        Long imageId = null;
 
         try {
 
@@ -50,13 +51,14 @@ public class ImageController {
 
             imageService.saveImage(image, loggedUser);
             imageUrl = "/images/" + image.getId();
-
+            imageId = image.getId();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         ModelAndView mv = new ModelAndView("pages/editor");
         mv.addObject("imageUrl", imageUrl);
+        mv.addObject("imageId", imageId);
         return mv;
     }
 
