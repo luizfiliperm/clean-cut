@@ -73,4 +73,25 @@ public class ImageController {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
+    @DeleteMapping("/images/{id}")
+    public ResponseEntity<Void> deleteImage(@PathVariable Long id) {
+
+        imageService.deleteImage(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @GetMapping("/images/download/{id}")
+    public ResponseEntity<byte[]> downloadImage(@PathVariable Long id) {
+        Image image = imageService.getImageById(id);
+
+        if (image != null) {
+            HttpHeaders headers = new HttpHeaders();
+            headers.set(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=image.png");
+            headers.set(HttpHeaders.CONTENT_TYPE, "application/octet-stream");
+            return new ResponseEntity<>(image.getData(), headers, HttpStatus.OK);
+        }
+
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+
 }
