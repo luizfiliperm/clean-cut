@@ -40,7 +40,9 @@
 
                     <button type="submit" class="btn-enviar"> Remover o fundo</button>
 
-                    <button class="btn-enviar">Download</button>
+                    <a th:href="${imageUrl != null} ? '/images/download/' + ${imageId} : '#'" class="btn-enviar" th:disabled="${imageUrl == null}">
+                        Download
+                    </a>
 
                 </form>
 
