@@ -13,15 +13,26 @@ O sistema vai permitir que o usuário possa criar uma conta, fazer login e logou
 - MySQL - Banco de dados.
 
 ## Instalação da aplicação
-Clonar o repositório: git clone https://github.com/luizfiliperm/clean-cut.git
-Executar o comando: cd clean-cut
+Clonar o repositório:
+```bash
+  git clone https://github.com/luizfiliperm/clean-cut.git
+```
+Entrar na pasta do projeto:
+```bash
+  cd clean-cut
+```
 
-Configurar o Banco de Dados mysql de acordo com o application.properties aqui:
-https://github.com/luizfiliperm/clean-cut/tree/main/src/main/resources
+Configurar o Banco de Dados mysql de acordo com o [application.properties](https://github.com/luizfiliperm/clean-cut/tree/main/src/main/resources)
 
-Construir e Executar a aplicação:
-mvn clean install
-mvn spring-boot:run
+Buildar a aplicação:
+```bash
+  mvn clean install
+```
+
+Executar a aplicação:
+```bash
+ mvn spring-boot:run
+```
 
 acessar: http://localhost:8080/
 
