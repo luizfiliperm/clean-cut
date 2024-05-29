@@ -14,7 +14,7 @@
                 <img th:src="'/images/' + ${image.imageId}" alt="Image">
                 <h3 th:text="${image.userName}">User</h3>
                 <p>Curtidas <span class="curtidas" th:text="${image.imageLikes}">100</span></p>
-                <a href="" class="botao-explore"><i class="fa-regular fa-heart"></i></a>
+                <a href="#" class="botao-explore"><i class="fa-regular fa-heart"></i></a>
                 <a th:href="'/images/download/' + ${image.imageId}" class="botao-explore">
                     <i class="fa-solid fa-download"></i>
                 </a>
