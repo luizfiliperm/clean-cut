@@ -7,7 +7,7 @@ RUN apk update && \
     java --version && \
     apk add --no-cache maven
 
-COPY ../../../AppData/Local/Temp /root/clean-cut
+COPY . /root/clean-cut
 
 WORKDIR /root/clean-cut
 
