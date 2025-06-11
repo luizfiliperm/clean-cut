@@ -2,13 +2,14 @@ name: test_release_trigger
 
 on:
   release:
-    - published
-    - unpublished
-    - created
-    - edited
-    - deleted
-    - prereleased
-    - released
+    types:
+      - published
+      - unpublished
+      - created
+      - edited
+      - deleted
+      - prereleased
+      - released
   
 jobs:
   publish:
