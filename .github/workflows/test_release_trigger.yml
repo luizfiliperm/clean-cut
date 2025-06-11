@@ -1,0 +1,17 @@
+name: test_release_trigger
+
+on:
+  release:
+    types: [published, unpublished, created, edited, deleted, prereleased, released]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Discover trigger type
+        run: |
+          echo "Release event type trigger: ${{ github.event.action }}"
